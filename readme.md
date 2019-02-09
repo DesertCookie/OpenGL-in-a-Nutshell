@@ -1,4 +1,4 @@
-## OpenGL LWJGL Tutorial
+## About this Repository
 This repository contains **tutorials and code about game development** with OpenGL in Java using LWJGL. The articles available in the 
 [Wiki](https://github.com/DesertCookie/OpenGL-LWJGL-Tutorial/wiki) are not only applicable to Java and can be used to get into OpenGL in other 
 programming languages too.<br>
