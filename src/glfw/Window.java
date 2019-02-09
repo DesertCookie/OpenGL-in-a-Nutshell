@@ -18,8 +18,13 @@ public class Window {
 	private long glfwWindow;
 	
 	
-	/** Constructs new {@code Window} and initializes GLFW if GLFW is not yet initialized. */
-	public Window() {
+	/**
+	 * Constructs new {@code Window} and initializes GLFW if GLFW is not yet initialized.
+	 * @param title  Title as {@code String}
+	 * @param width  Horizontal size in pixels
+	 * @param height Vertical size in pixels
+	 */
+	public Window( String title,int width,int height ) {
 		if(!glfwInitialized) {
 			GLFWErrorCallback.createPrint( System.err ).set();
 			
@@ -37,7 +42,7 @@ public class Window {
 		GLFW.glfwWindowHint( GLFW.GLFW_CONTEXT_VERSION_MAJOR,3 );
 		GLFW.glfwWindowHint( GLFW.GLFW_CONTEXT_VERSION_MINOR,3 );
 		
-		glfwWindow = GLFW.glfwCreateWindow( 1280,720,"Window Title",MemoryUtil.NULL,MemoryUtil.NULL );
+		glfwWindow = GLFW.glfwCreateWindow( width,height,title,MemoryUtil.NULL,MemoryUtil.NULL );
 		if(glfwWindow == MemoryUtil.NULL) throw new IllegalStateException( "GLFW window creation failed" );
 		// Window successfully created
 		
