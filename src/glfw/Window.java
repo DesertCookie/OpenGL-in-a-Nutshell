@@ -39,8 +39,6 @@ public class Window {
 		GLFW.glfwDefaultWindowHints();
 		GLFW.glfwWindowHint( GLFW.GLFW_RESIZABLE,GLFW.GLFW_FALSE ); // user cannot resize window
 		GLFW.glfwWindowHint( GLFW.GLFW_VISIBLE,GLFW.GLFW_FALSE ); // window is not automatically visible after creation
-		GLFW.glfwWindowHint( GLFW.GLFW_CONTEXT_VERSION_MAJOR,3 );
-		GLFW.glfwWindowHint( GLFW.GLFW_CONTEXT_VERSION_MINOR,3 );
 		
 		glfwWindow = GLFW.glfwCreateWindow( width,height,title,MemoryUtil.NULL,MemoryUtil.NULL );
 		if(glfwWindow == MemoryUtil.NULL) throw new IllegalStateException( "GLFW window creation failed" );
@@ -114,6 +112,11 @@ public class Window {
 		int[] yPosArray = new int[ 1 ];
 		GLFW.glfwGetWindowPos( glfwWindow,null,yPosArray );
 		return yPosArray[ 0 ];
+	}
+	
+	/** @return {@code False} while the user hasn't attempted to close the window. */
+	public boolean isOpen() {
+		return !GLFW.glfwWindowShouldClose( glfwWindow );
 	}
 	
 	/** Makes the window visible. */
