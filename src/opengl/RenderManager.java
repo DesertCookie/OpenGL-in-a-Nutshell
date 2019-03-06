@@ -1,6 +1,7 @@
 package opengl;
 
 
+import glfw.Window;
 import org.lwjgl.opengl.GL;
 import org.lwjgl.opengl.GL11;
 
@@ -51,6 +52,14 @@ public class RenderManager {
 		GL11.glVertex2f( x,y );
 		
 		GL11.glEnd();
+	}
+	
+	public void drawPixelPerfectQuad( Window window,int x,int y,int w,int h,Color color ) {
+		float fx = x * 2.0F / window.getWidth() - 1;
+		float fy = y * -2.0F / window.getWidth() + 1;
+		float fw = (float) w * 2 / window.getWidth();
+		float fh = (float) h * -2 / window.getHeight();
+		this.drawBetterQuad( fx,fy,fw,fh,color );
 	}
 	
 	
