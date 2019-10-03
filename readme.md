@@ -1,3 +1,7 @@
+**Important Note:** This repository is due to be split up into several new repositories that will house GitBooks and code about [**Vulkan**](https://github.com/DesertCookie/Vulkan-in-a-Nutshell), [**GLFW**](https://github.com/DesertCookie/GLFW-in-a-Nutshell), and [**OpenAL**](https://github.com/DesertCookie/OpenAL-in-a-Nutshell). This repository will be transformed to exclusively feature guides about **OpenGL**. *Links will become functional as repositories become available.*
+
+---
+
 ## About this Repository
 This repository contains **tutorials and code about game development** with **OpenGL 3.3+** in Java using **LWJGL 3**. The articles available in the 
 [Wiki](https://github.com/DesertCookie/OpenGL-LWJGL-Tutorial/wiki) are not only applicable to Java and can be used to get into OpenGL in other 
